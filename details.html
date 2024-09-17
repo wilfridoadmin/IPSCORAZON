@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Paciente - Corazón de Arte Terapia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="loadPatientDetails()">
+    <h1>Detalles del Paciente</h1>
+    <p><strong>Nombre:</strong> <span id="patientNameDetail"></span></p>
+    <p><strong>Tipo de Documento:</strong> <span id="patientDocumentTypeDetail"></span></p>
+    <p><strong>Número de Documento:</strong> <span id="patientDocumentNumberDetail"></span></p>
+    <p><strong>Edad:</strong> <span id="patientAgeDetail"></span></p>
+    <p><strong>Fecha de Nacimiento:</strong> <span id="patientDateOfBirthDetail"></span></p>
+
+    <button onclick="openForm('historiaClinica')">Historia Clínica</button>
+    <button onclick="openForm('evolucion')">Evolución</button>
+    <button onclick="openForm('ordenes')">Órdenes</button>
+    <button onclick="openForm('triage')">Triage</button>
+
+    <div id="formatsList"></div>
+
+    <div id="formContainer" style="display: none;">
+        <h2 id="formTitle"></h2>
+        <label>Fecha:</label>
+        <input type="date" id="formDate">
+        <br>
+        <label>Contenido:</label>
+        <textarea id="formContent"></textarea>
+        <br>
+        <button onclick="saveForm()">Guardar</button>
+        <button onclick="cancelForm()">Cancelar</button>
+    </div>
+
+    <script src="details.js"></script>
+</body>
+</html>
+
+
